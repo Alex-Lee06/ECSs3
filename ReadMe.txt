@@ -38,3 +38,45 @@ resolvers ++= Seq(
     "Spray repository" at "http://repo.spray.io",
     "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 )
+
+
+
+======================
+public class Test {
+    public static String uid = "root";
+    public static String secret = "KHBkaH0Xd7YKF43ZPFbWMBT9OP0vIcFAMkD/9dwj";
+    public static String viprDataNode = "http://ecs.yourco.com:9020";
+
+    public static String bucketName = "myBucket";
+    public static File objectFile = new File("/photos/cat1.jpg");
+
+    public static void main(String[] args) throws Exception {
+
+        AmazonS3Client client = new AmazonS3Client(new BasicAWSCredentials(uid, secret));
+
+        S3ClientOptions options = new S3ClientOptions();
+        options.setPathStyleAccess(true);
+
+        AmazonS3Client client = new AmazonS3Client(credentials);
+        client.setEndpoint(viprDataNode);
+        client.setS3ClientOptions(options);
+
+        client.createBucket(bucketName, "Standard");
+        listObjects(client);
+
+        client.putObject(bucketName, objectFile.getName(), objectFile);
+        listObjects(client);
+
+        client.copyObject(bucketName,objectFile.getName(),bucketName, "copy-" + objectFile.getName());
+        listObjects(client);
+    }
+
+    public static void listObjects(AmazonS3Client client) {
+        ObjectListing objects = client.listObjects(bucketName);
+        for (S3ObjectSummary summary : objects.getObjectSummaries()) {
+            System.out.println(summary.getKey()+ "   "+summary.getOwner());
+        }
+    }
+}
+==============
+
