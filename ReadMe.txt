@@ -83,21 +83,7 @@ https://mvnrepository.com/artifact/com.emc.ecs/spark-ecs-s3?fbclid=IwAR2l8tgXt-M
 
 ==============
 
-S3curl.pl
- 
-Sample commands:
- 
-./trv_s3curl.pl --debug --id=emcecsdev --put=/home/n38f52/s3_test/jack_straw.txt -- http://ecslab.dvllb.travp.net/ebia-vol-test/jack_straw.txt
- 
- ./trv_s3curl.pl --id=emcecsdev -- -s http://ecslab.dvllb.travp.net:80/ebia-vol-test/ | xmllint --format -  <-- DON'T FORGET THE LAST DASH AFTER FORMAT!!
- 
-./trv_s3curl.pl --id=emcecsdev -- http://ecslab.dvllb.travp.net/ebia-vol-test/gd_lyrics.txt > /home/n38f52/gd_lyrics.out
- 
-Check if versioning is enabled (it's not):
- 
- ./trv_s3curl.pl --id=emcecsdev -- -ks http://ecslab.dvllb.travp.net:80/ebia-vol-test?versioning  | xmllint --format -
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<VersioningConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/"/>
+
 
 
 
