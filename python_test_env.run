@@ -1,0 +1,15 @@
+export DATA_PATH=/share_data
+export FILE1=supplier.tbl
+export FILE2=nation.tbl
+# 0 based counter - column 1 = 0, column 1 = 1, etc
+export FILE1_FILTER_NUM=3
+export FILE2_FILTER_NUM=0
+#
+# S3 Connector information - Dell ECS
+#
+export ECS_USER_ID=ebia-vol-test-user
+export ECS_KEY=qsUJepZHhevNxhyqfXeM97vJ188hkdvajjmga5/b
+export ECS_STORAGE_BUCKET=ebia-vol-test
+#
+# S3 Connector information - Dell ECS
+#
