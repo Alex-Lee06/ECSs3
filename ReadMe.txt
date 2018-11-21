@@ -1,10 +1,3 @@
-•	We don’t have official document on reading out data in S3 bucket, specifically in Scala code.
-•	However, there are several examples of accessing an S3 bucket in Scala on the web.  The only difference is, you would have to configure the client to connect to ECS instead of AWS.
-•	Since Scala is based on Java, the AWS SDK for Java can be used, or another 3rd Scala wrapper.  We have samples that show how to connect to ECS using the AWS SDK for Java on github as well.
-•	As for s3curl, it is used in the same manner as it would for AWS.  Below is customer viewable KB which explains in detail how this is used:
-	How to perform basic s3 operations on ECS 3.x using the s3curl.pl script: https://support.emc.com/kb/497076 
-Action Plan:
-•	Customer to advise if further assistance is needed or if this SR can be closed.
 
 
 
