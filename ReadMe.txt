@@ -1,3 +1,6 @@
+https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/examples-s3-objects.html
+https://bitbucket.org/atlassian/aws-scala
+https://github.com/EMCECS/ecs-samples/tree/master/aws-java-workshop/src/main/java/com/emc/ecs/s3/sample
 
 
 
