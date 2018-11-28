@@ -1,7 +1,7 @@
 https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/examples-s3-objects.html
 https://bitbucket.org/atlassian/aws-scala
 https://github.com/EMCECS/ecs-samples/tree/master/aws-java-workshop/src/main/java/com/emc/ecs/s3/sample
-
+https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-install.html
 
 http://bigdatatech.taleia.software/2015/12/07/bash-script-to-upload-files-to-a-amazon-s3-bucket-using-curl/
 
