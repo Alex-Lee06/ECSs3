@@ -7,9 +7,7 @@ http://bigdatatech.taleia.software/2015/12/07/bash-script-to-upload-files-to-a-a
 
 https://italy.emc.com/collateral/TechnicalDocument/docu59635.pdf
 
-
-
-
+ val myRDD = sc.textFile("s3a://ebia-vol-test-user:qsUJepZHhevNxhyqfXeM97vJ188hkdvajjmga5/b@ebia-vol-test/gd_lyrics.txt")
 
 Camel Router with Scala DSL Project
 ===================================
