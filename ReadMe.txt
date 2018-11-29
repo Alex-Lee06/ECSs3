@@ -1,5 +1,16 @@
 https://github.com/djannot/ecs-p3/blob/master/spark/spark.md
 
+val gd_path = sc.textFile("s3a://ebia-vol-test/gd_lyrics.txt")
+val row_gd = gd_path.map(line => Row.fromSeq(line.split(",", -1)))
+var df_gd = sqlContext.createDataFrame(row_gd, schema)
+
+val jack_path = sc.textFile("s3a://ebia-vol-test/jack_straw.txt")
+val row_jack = jack_path.map(line => Row.fromSeq(line.split(",", -1)))
+var df_jack = sqlContext.createDataFrame(row_jack, schema)
+
+val df3 = df_gd.join(df_jack)
+
+
 
 https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/examples-s3-objects.html
 https://bitbucket.org/atlassian/aws-scala
