@@ -10,6 +10,7 @@ var df_jack = sqlContext.createDataFrame(row_jack, schema)
 
 val df3 = df_gd.join(df_jack)
 
+val df1 = sqlContext.createDataFrame(rowRdd1, new StructType(schema.tail.toArray))
 
 
 https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/examples-s3-objects.html
