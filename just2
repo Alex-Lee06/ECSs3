@@ -1,0 +1,36 @@
+import org.apache.spark.sql.SparkSession
+import com.databricks.spark.csv
+import org.apache.spark.sql.SQLContext
+import org.apache.commons.io
+import org.apache.commons.io.FileUtils
+import java.io._
+
+object Merge{
+    def main(args: Array[String]): Unit = {
+
+        //check to delete the existing files or folder
+        FileUtils.deleteQuietly(new File("/share_data/dockertest/spark_test/newResult"))
+        //Instantiate Spark Session
+        val spark = SparkSession.builder().master("local").appName("SparkTest").getOrCreate()
+                //Load the customer.tbl to a dataframe
+              val df = spark.sqlContext.read.format("com.databricks.spark.csv").option("header", "false").option("inferSchema", "true").option("delimiter","|").load("/share_data/customer.tbl")
+                //Load the order.tbl to a dataframe
+              val df2 = spark.sqlContext.read.format("com.databricks.spark.csv").option("header", "false").option("inferSchema", "true").option("delimiter","|").load("/share_data/orders.tbl")
+
+                //Defining column names for customer.tbl and orders.tbl
+              val newcolname = Seq("ID", "cust", "desc", "num", "SN", "QTY", "type", "txt", "idk")
+              val newcolname2 = Seq("ID1", "serial", "grade", "weight", "DAT", "lvl", "cnum", "other", "text", "null")
+                //Set customer.tbl and orders.tbl to a dataframe
+              val dfSchema = df.toDF(newcolname: _*)
+              val dfSchema2 = df2.toDF(newcolname2: _*)
+                //Registering tables
+                 dfSchema.registerTempTable("temp1")
+                 dfSchema2.registerTempTable("temp2")
+        //Joining tables using Spark SQL
+        val result = spark.sql("select * from temp1 Inner join temp2 on temp1.ID=temp2.ID1")
+        //Dumping data into output file
+              result.write.format("csv").save("/share_data/dockertest/spark_test/newResult")
+
+
+    }
+}
