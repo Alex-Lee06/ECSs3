@@ -114,3 +114,6 @@ https://mvnrepository.com/artifact/com.emc.ecs/spark-ecs-s3?fbclid=IwAR2l8tgXt-M
 
 help for loading spark shell jars
 https://stackoverflow.com/questions/45756554/how-to-use-s3-with-apache-spark-2-2-in-the-spark-shell
+
+spark s3 tutorial
+http://www.sparktutorials.net/Reading+and+Writing+S3+Data+with+Apache+Spark
