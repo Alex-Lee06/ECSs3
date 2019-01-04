@@ -117,3 +117,6 @@ https://stackoverflow.com/questions/45756554/how-to-use-s3-with-apache-spark-2-2
 
 spark s3 tutorial
 http://www.sparktutorials.net/Reading+and+Writing+S3+Data+with+Apache+Spark
+
+s3 cheatsheet
+https://devhints.io/awscli
