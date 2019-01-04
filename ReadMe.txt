@@ -120,3 +120,6 @@ http://www.sparktutorials.net/Reading+and+Writing+S3+Data+with+Apache+Spark
 
 s3 cheatsheet
 https://devhints.io/awscli
+
+s3 cheatsheet better
+https://lzone.de/cheat-sheet/S3
