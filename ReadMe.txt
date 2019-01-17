@@ -123,3 +123,6 @@ https://devhints.io/awscli
 
 s3 cheatsheet better
 https://lzone.de/cheat-sheet/S3
+
+Hortonworks Download
+https://hortonworks.com/downloads/
