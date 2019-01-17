@@ -126,3 +126,4 @@ https://lzone.de/cheat-sheet/S3
 
 Hortonworks Download
 https://hortonworks.com/downloads/
+https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-installation/content/download_the_ambari_repo_lnx7.html
